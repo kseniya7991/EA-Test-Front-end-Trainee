@@ -3,11 +3,17 @@
 
 
 .timer {
+    margin-bottom: 72px;
+
     &__time-list {
         @include resetUl;
     }
     &__time-description {
         @include resetUl; 
+    }
+
+    @include mediaTablet {
+        margin-bottom: 40px;
     }
 }
 
@@ -56,11 +62,10 @@
         }
 
         @include mediaMobile {
-            margin: 0 24px 3px;
-
+            margin: 0 9px 6px;
 
             &::after {
-                right: -32px;
+                right: -18px;
             }
         }
 }
@@ -75,7 +80,7 @@
 
     font-size: 16px;
     line-height: 100%;
-    color: $button-color;
+    color: $button-text-color;
 
     display: flex;
     align-items: center;

@@ -6,6 +6,15 @@
     flex-direction: column;
     align-items: center;
     font-size: 72px;
+
+    margin-bottom: 76px;
+
+    @include mediaTablet {
+        margin-bottom: 169px;
+    }
+    @include mediaMobile {
+        margin-bottom: 86px;
+    }
 }
 
 .main__heading {
@@ -42,12 +51,49 @@
     color: $text-color;
     text-align: center;
 
+    &_event {
+        margin-bottom: 12px;
+    }
+
     @include mediaTablet {
         font-size: 16px;
-        max-width: 286px;
+        max-width: 300px;
 
         margin-bottom: 40px;
+
+        &_event {
+            margin-bottom: 15px;
+        }
     }
 
     @include mediaMobile {}
+}
+
+.main__event-btn {
+    width: 240px;
+    height: 60px;
+    padding: 17px 20px 17px 28px;
+    box-sizing: border-box;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $button-color;
+    border-radius: 40px;
+    color: $button-text-color;
+    border: 0;
+}
+
+.event-btn {
+    &__text {
+        font-size: 18px;
+        line-height: 150%;
+    }
+
+    &__arrow {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
 }

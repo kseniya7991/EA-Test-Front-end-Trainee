@@ -1,0 +1,25 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.footer {
+    width: 100%;
+    
+    max-width: $breakpoint-max;
+    height: 192px;
+
+    background-color: $footer-background;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mediaTablet {
+        height: 160px;
+    }
+
+    @include mediaMobile {
+        height: 141px;
+        min-width: $breakpoint-mobile;
+        margin: 0 auto;
+    }
+}

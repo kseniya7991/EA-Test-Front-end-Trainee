@@ -1,0 +1,53 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.design-vector {
+    position: absolute;
+    z-index: -1;
+
+    &_left {
+        left: -386px;
+        top: -274px;
+
+        @media screen and(max-width: 1112px) {
+            left: -447px;
+            top: -313px;
+        }
+
+        @include mediaTablet {
+            transform: scale(.5);
+            top: -324px;
+            left: -414px;
+        }
+
+        @media screen and(max-width: 520px) {
+           left: -479px;
+        }
+
+        @include mediaMobile {
+            transform: scale(.45);
+            top: -339px;
+            left: -416px;
+        }
+    }
+
+    &_right {
+        top: -518px;
+        right: -424px;
+        
+        @include mediaTablet {
+            transform: rotate(-5deg);
+        }
+
+        @media screen and(max-width: 520px) {
+            right: -494px;
+        }
+
+        @include mediaMobile {
+            right: -444px;
+            transform: scale(.78) rotate(-5deg);
+        }
+    }
+
+
+}

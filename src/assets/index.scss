@@ -2,6 +2,9 @@
 @import '../components/header/header.scss';
 @import '../components/main/main.scss';
 @import '../components/timer/timer.scss';
+@import '../components/footer/footer.scss';
+@import '../components/form/form.scss';
+@import '../components/design-vector/design-vector.scss';
 
 html {
     font-family: $font-family;
@@ -13,25 +16,36 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
+    position: relative;
+    z-index: 0;
+
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
 }
 
 .page {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
     margin: 0 auto;
-    padding: 60px 20px 70px;
+    padding: 60px 20px 0px;
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    height: 100%;
     width: 100%;
     max-width: $breakpoint-max;
     min-width: $breakpoint-mobile;
 
     @include mediaTablet {
-        padding: 100px 20px 60px;
+        padding: 100px 20px 0px;
     }
 
     @include mediaMobile {
-        padding: 80px 20px 50px;
+        padding: 80px 20px 0px;
     }
 }
