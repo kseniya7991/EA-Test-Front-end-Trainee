@@ -1,0 +1,37 @@
+@import './variables.scss';
+@import '../components/header/header.scss';
+@import '../components/main/main.scss';
+@import '../components/timer/timer.scss';
+
+html {
+    font-family: $font-family;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.page {
+    margin: 0 auto;
+    padding: 60px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: $breakpoint-max;
+    min-width: $breakpoint-mobile;
+
+    @include mediaTablet {
+        padding: 100px 20px 60px;
+    }
+
+    @include mediaMobile {
+        padding: 80px 20px 50px;
+    }
+}

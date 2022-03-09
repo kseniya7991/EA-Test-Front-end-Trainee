@@ -1,0 +1,89 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+
+.timer {
+    &__time-list {
+        @include resetUl;
+    }
+    &__time-description {
+        @include resetUl; 
+    }
+}
+
+.timer__time-item {
+        position: relative;
+        margin: 0 10px 3px;
+        width: 132px;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: $heading-color;
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 100%;
+        
+        &::after {
+            content: ":";
+            position: absolute;
+            bottom: 5px;
+            right: -24px;
+        }
+
+        &:nth-last-child(1) {
+            margin-right: 0;
+            &::after {
+                content: '';
+            }
+        }
+
+        &:nth-of-type(1) {
+            margin-left: 0;
+        }
+
+        @include mediaTablet {
+            font-size: 36px;
+            margin: 0 17px 6px;
+            width: 64px;
+
+            &::after {
+                right: -23px;
+                bottom: 3px;
+            }
+        }
+
+        @include mediaMobile {
+            margin: 0 24px 3px;
+
+
+            &::after {
+                right: -32px;
+            }
+        }
+}
+
+.timer__desc-item {
+    width: 132px;
+    height: 54px;
+    background-image: url('../../img/timer.svg');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+    font-size: 16px;
+    line-height: 100%;
+    color: $button-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mediaTablet {
+        width: 64px;
+        height: 40px;
+        background-image: url('../../img/timer-tablet.svg');
+    }
+}

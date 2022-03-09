@@ -1,0 +1,25 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+
+.header {
+    margin-bottom: 90px;
+
+    @include mediaTablet {
+        margin-bottom: 166px;
+    }
+    @include mediaMobile {
+        margin-bottom: 66px;
+    }
+}
+.header__logo {
+    width: 190px;
+    height: 60px;
+    object-fit: cover;
+
+    @include mediaMobile {
+        width: 128px;
+        height: 40px;
+    }
+}
+

@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+@mixin resetUl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+// Миксины для брейкпоинтов
+
+@mixin mediaMax {
+    @media (max-width: #{$breakpoint-max}) {
+      @content;
+    }
+}
+
+@mixin mediaTablet {
+    @media (max-width: #{$breakpoint-tablet}) {
+      @content;
+    }
+}
+
+@mixin mediaMobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+      @content;
+    }
+}
