@@ -1,0 +1,97 @@
+@import "../../assets/mixins";
+@import "../../assets/variables";
+
+.popup {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    min-width: $breakpoint-mobile;
+    background-color: $popup-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+
+    &_active {
+        visibility: visible;
+        opacity: 1;
+        transition: .3s;
+    }
+}
+
+.popup__form {
+    position: relative;
+    width: 320px;
+    height: 370px;
+    padding: 70px 16px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    background-color: $popup-form-color;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.popup__status {
+    margin: 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 104%;
+    color: $heading-color;
+
+}
+
+.popup__description {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+
+    color: $popup-description-color;
+    margin-bottom: 30px;
+}
+
+.popup__button {
+    width: 200px;
+    height: 59px;
+    background-color: $button-color;
+    color: $button-text-color;
+    padding: 16px;
+    text-align: center;
+    border-radius: 40px;
+    border: 0;
+
+    cursor: pointer;
+}
+
+.popup__button_cross {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    width: 55px;
+    height: 55px;
+    border: 0;
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    background-color: $popup-form-color;
+    padding: 15px;
+    background-image: url('../../img/close.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

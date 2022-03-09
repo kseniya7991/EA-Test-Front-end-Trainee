@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 
 module.exports = {
@@ -47,6 +48,17 @@ module.exports = {
                   }
             }],
         },
+       /*  { 
+            test: /\.(html|htm)$/, 
+            use: [
+            {
+                loader: 'html-loader',
+                options: {
+                    minimize: false,
+                }
+            }
+            ]
+        } */
        ]
     },
     plugins: [
@@ -57,5 +69,6 @@ module.exports = {
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin(),
         new webpack.HotModuleReplacementPlugin(),
+        new NodePolyfillPlugin(),
     ]
 }

@@ -46,8 +46,17 @@
         font-size: 14px;
         line-height: 150%;
     }
+
 }
 
+// Класс невалидного email
+.input-email_not-validate {
+    position: relative;
+    color: $not-validate;
+}
+
+
+// Кнопка сабмита
 .form__submit-btn {
     position: absolute;
     right: 8px;
@@ -68,6 +77,13 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: 20px;
+
+
+    //Если введен невалидный емейл
+    &_not-validate {
+        background-image: url('../../img/error.png');
+        opacity: .5;
+    }
 
     @include mediaTablet {
         width: 33px;

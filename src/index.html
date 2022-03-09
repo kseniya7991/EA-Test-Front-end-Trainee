@@ -11,13 +11,25 @@
 
   <body>
     <div class="page">
-      <img alt="design image" class="design-vector design-vector_left"
-      src=<%=require("./img/design-vector-left.svg")%> /> <img alt="design
-      image" class="design-vector design-vector_right"
-      src=<%=require("./img/design-vector-right.svg")%> />
+      <img
+        alt="design image"
+        class="design-vector design-vector_left"
+        src="<%=require('./img/design-vector-left.svg')%>"
+      />
+      <img
+        alt="design
+      image"
+        class="design-vector design-vector_right"
+        src="<%=require('./img/design-vector-right.svg')%>"
+      />
       <header class="header">
-        <img class="header__logo" alt="Lead logo"
-        src=<%=require("./img/logo.svg")%> />
+        <a href="#" target="_blank" class="header__logo_link">
+          <img
+            class="header__logo"
+            alt="Lead logo"
+            src="<%=require('./img/logo.svg')%>"
+          />
+        </a>
       </header>
       <main class="main">
         <h1 class="main__heading">Under Construction</h1>
@@ -26,38 +38,55 @@
         </p>
         <div class="timer">
           <ul class="timer__time-list">
-            <li class="timer__time-item" id="#days">92</li>
-            <li class="timer__time-item" id="#hours">11</li>
-            <li class="timer__time-item" id="#minutes">41</li>
-            <li class="timer__time-item" id="#seconds">48</li>
+            <li class="timer__time-item" id="days"></li>
+            <li class="timer__time-item" id="hours"></li>
+            <li class="timer__time-item" id="minutes"></li>
+            <li class="timer__time-item" id="seconds"></li>
           </ul>
           <ul class="timer__time-description">
-            <li class="timer__desc-item" id="#days">DD</li>
-            <li class="timer__desc-item" id="#hours">HH</li>
-            <li class="timer__desc-item" id="#minutes">MM</li>
-            <li class="timer__desc-item" id="#seconds">SS</li>
+            <li class="timer__desc-item" id="days"></li>
+            <li class="timer__desc-item" id="hours"></li>
+            <li class="timer__desc-item" id="minutes"></li>
+            <li class="timer__desc-item" id="seconds"></li>
           </ul>
         </div>
         <p class="main__description main__description_event">
           Check our event page when you wait:
         </p>
-        <button class="main__event-btn" type="button">
-          <span class="event-btn__text">Go to the event</span>
-          <img class="event-btn__arrow" alt="Arrow"
-          src=<%=require("./img/arrow.svg")%> />
-        </button>
+        <a
+          href="https://example.com"
+          target="_blank"
+          class="main__event-btn_link"
+          rel="noreferrer"
+        >
+          <button class="main__event-btn" type="button">
+            <span class="event-btn__text">Go to the event</span>
+            <img
+              class="event-btn__arrow"
+              alt="Arrow"
+              src="<%=require('./img/arrow.svg')%>"
+            />
+          </button>
+        </a>
       </main>
-
-      <!-- <div class="popup"></div> -->
     </div>
     <footer class="footer">
       <form class="form">
         <input
+          name="email"
           class="form__input-email"
           placeholder="Enter your Email and get notified"
         />
         <button type="submit" class="form__submit-btn"></button>
       </form>
     </footer>
+    <div class="popup">
+      <form class="popup__form">
+        <h2 class="popup__status"></h2>
+        <p class="popup__description"></p>
+        <button type="button" class="popup__button close-btn">Close</button>
+        <button type="button" class="popup__button_cross close-btn"></button>
+      </form>
+    </div>
   </body>
 </html>

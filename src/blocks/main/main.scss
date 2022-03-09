@@ -79,12 +79,19 @@
     justify-content: space-between;
     align-items: center;
 
+    cursor: pointer;
+
     background-color: $button-color;
     border-radius: 40px;
     color: $button-text-color;
     border: 0;
+
+    &_link {
+        text-decoration: none;
+    }
 }
 
+// Кнопка перехода на событие
 .event-btn {
     &__text {
         font-size: 18px;

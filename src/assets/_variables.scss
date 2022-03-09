@@ -1,15 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 $font-family: 'Poppins', sans-serif;
+
 $heading-color: #162C4E;
 $text-color: #000000cc;
+
 $button-text-color: #fff;
 $button-color: #1D4169;
+
 $footer-background: #162C4E;
+
 $input-background: #fff;
 $placeholder-color: rgba(0, 0, 0, 0.6);
 $submit-btn-color: #DF2224;
+$not-validate: #f1292c;
 
+$popup-color: #162C4E99;
+$popup-form-color: #fff;
+$popup-description-color: rgba(0, 0, 0, 0.8);
 
 // Брейк поинты
 $breakpoint-max: 1920px;

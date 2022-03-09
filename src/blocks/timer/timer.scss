@@ -17,6 +17,7 @@
     }
 }
 
+// Таймер - блок с цифрами
 .timer__time-item {
         position: relative;
         margin: 0 10px 3px;
@@ -70,6 +71,8 @@
         }
 }
 
+
+// Таймер - блок с подписями (дни, часы) и т.д.
 .timer__desc-item {
     width: 132px;
     height: 54px;

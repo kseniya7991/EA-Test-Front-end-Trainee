@@ -1,5 +1,6 @@
 @import './variables.scss';
 
+//Настройки сборы стандартных настроек для списков
 @mixin resetUl {
     list-style-type: none;
     margin: 0;
@@ -8,8 +9,9 @@
     flex-direction: row;
     justify-content: space-between;
 }
-// Миксины для брейкпоинтов
 
+
+// Миксины для брейкпоинтов
 @mixin mediaMax {
     @media (max-width: #{$breakpoint-max}) {
       @content;

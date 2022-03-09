@@ -1,10 +1,12 @@
 @import './variables.scss';
-@import '../components/header/header.scss';
-@import '../components/main/main.scss';
-@import '../components/timer/timer.scss';
-@import '../components/footer/footer.scss';
-@import '../components/form/form.scss';
-@import '../components/design-vector/design-vector.scss';
+@import '../blocks/header/header.scss';
+@import '../blocks/main/main.scss';
+@import '../blocks/timer/timer.scss';
+@import '../blocks/footer/footer.scss';
+@import '../blocks/form/form.scss';
+@import '../blocks/popup/popup.scss';
+@import '../blocks/design-vector/design-vector.scss';
+@import '../blocks/page/page.scss';
 
 html {
     font-family: $font-family;
@@ -25,27 +27,3 @@ body {
     align-items: center;
 }
 
-.page {
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 60px 20px 0px;
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    max-width: $breakpoint-max;
-    min-width: $breakpoint-mobile;
-
-    @include mediaTablet {
-        padding: 100px 20px 0px;
-    }
-
-    @include mediaMobile {
-        padding: 80px 20px 0px;
-    }
-}
