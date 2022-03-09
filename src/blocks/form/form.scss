@@ -72,17 +72,30 @@
 
     border-radius: 50%;
 
+    cursor: pointer;
+
     background-color: $submit-btn-color;
     background-image: url('../../img/arrow.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 20px;
 
+    transition: .2s;
+    
+    &:hover {
+        transition: .2s;
+        background-size: 30px;
+        box-shadow: 0px 0px 20px 0px $submit-btn-color;
+    }
 
     //Если введен невалидный емейл
     &_not-validate {
         background-image: url('../../img/error.png');
         opacity: .5;
+
+        &:hover {
+            background-size: 20px;
+        }
     }
 
     @include mediaTablet {
@@ -90,4 +103,5 @@
         height: 33px;
         right: 4px;
     }
+
 }
